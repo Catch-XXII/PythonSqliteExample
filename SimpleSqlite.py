@@ -12,7 +12,6 @@ if match is None:
     raise ValueError('Not a valid E-mail address')
 
 
-
 connection = sqlite3.connect('playerdb.db')
 
 cursor = connection.cursor()
