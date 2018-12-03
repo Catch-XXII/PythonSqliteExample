@@ -3,6 +3,7 @@ import re
 
 name = input('Please enter your name: ')
 age = int(input('Please enter your age: '))
+phone = input('Please enter your phone number: ')
 email = input('Please enter your email: ')
 addressToVerify = email
 match = re.match('^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$', addressToVerify)
@@ -10,7 +11,7 @@ if match is None:
     print('Not a valid E-mail address')
     raise ValueError('Not a valid E-mail address')
 
-phone = input('Please enter your phone number: ')
+
 
 connection = sqlite3.connect('playerdb.db')
 
